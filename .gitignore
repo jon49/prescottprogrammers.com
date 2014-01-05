@@ -1,8 +1,0 @@
-# Hakyll compiled site
-_cache
-_site
-site
-hakyll
-deploy
-*!sync
-*.
