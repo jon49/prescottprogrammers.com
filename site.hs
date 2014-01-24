@@ -2,6 +2,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
+import           Hakyll.Core.Util.String
+import           Data.List (isSuffixOf)
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -19,19 +21,19 @@ main = hakyll $ do
         compile compressCssCompiler
 
     match (fromList ["about.md", "contact.md", "calendar.md"]) $ do
-        route   $ setExtension "html"
+        route   $ createIndexFolder
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
     match "posts/*" $ do
-        route $ setExtension "html"
+        route $ createIndexFolder
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
-    create ["archive.html"] $ do
+    create ["archive/index.html"] $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
@@ -43,7 +45,7 @@ main = hakyll $ do
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
-                >>= relativizeUrls
+                >>= cleanIndexUrls
 
 
     match "index.html" $ do
@@ -57,7 +59,7 @@ main = hakyll $ do
             getResourceBody
                 >>= applyAsTemplate indexCtx
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
-                >>= relativizeUrls
+                >>= cleanIndexUrls -- relativizeUrls
 
     match "templates/*" $ compile templateCompiler
 
@@ -67,3 +69,18 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+-- Blog posts
+-- Create folders for dashes `-` to `/` and make index file name.md to index.html
+createIndexFolder =
+    gsubRoute "-" (const "/")
+    `composeRoutes` gsubRoute ".md" (const "/index.md")
+    `composeRoutes` setExtension "html"
+
+cleanIndexUrls :: Item String -> Compiler (Item String) 
+cleanIndexUrls = return . fmap (withUrls clean) 
+    where 
+      idx = "index.html" 
+      clean url 
+          | idx `isSuffixOf` url = take (length url - length idx) url 
+          | otherwise            = url 
