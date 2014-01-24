@@ -6,3 +6,8 @@ hakyll
 deploy
 *!sync
 *.
+*.swp
+*.bk
+site
+*.o
+*.hi

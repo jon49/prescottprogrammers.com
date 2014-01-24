@@ -1,5 +1,5 @@
 ---
-title: F# an Introduction
+title: F# an Introduction: Single Page
 ---
 
 % F\#
