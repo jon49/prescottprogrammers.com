@@ -21,13 +21,13 @@ main = hakyll $ do
         compile compressCssCompiler
 
     match (fromList ["about.md", "contact.md", "calendar.md"]) $ do
-        route   $ createIndexFolder
+        route   $ asFolderWithIndex
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
     match "posts/*" $ do
-        route $ createIndexFolder
+        route $ asFolderWithIndex
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
@@ -59,7 +59,7 @@ main = hakyll $ do
             getResourceBody
                 >>= applyAsTemplate indexCtx
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
-                >>= cleanIndexUrls -- relativizeUrls
+                >>= cleanIndexUrls
 
     match "templates/*" $ compile templateCompiler
 
@@ -72,7 +72,7 @@ postCtx =
 
 -- Blog posts
 -- Create folders for dashes `-` to `/` and make index file name.md to index.html
-createIndexFolder =
+asFolderWithIndex =
     gsubRoute "-" (const "/")
     `composeRoutes` gsubRoute ".md" (const "/index.md")
     `composeRoutes` setExtension "html"
