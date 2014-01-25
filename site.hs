@@ -78,7 +78,7 @@ postCtx =
 -- Create folders for dashes `-` to `/` and make index file name.md to index.html
 asFolderWithIndex =
     gsubRoute "-" (const "/")
-    `composeRoutes` gsubRoute ".md" (const "/index.md")
+    `composeRoutes` gsubRoute "\\." (const "/index.")
     `composeRoutes` setExtension "html"
 
 cleanIndexUrls :: Item String -> Compiler (Item String) 
