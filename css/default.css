@@ -4,12 +4,33 @@ body {
     font-size: 16px;
     margin: 0px auto 0px auto;
     width: 600px;
+    background: #FFF;
 }
-
+a:link {
+    text-decoration: none;
+    color: #555;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15px;
+}
+a:visited {
+    text-decoration:none;
+    color: #AAA;
+}
+a:hover {
+    background-color: #555;
+    color: #FFF;
+}
+a:active {
+    background: #000;
+}
 div#header {
     border-bottom: 2px solid #C3E5DD;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
+    background: #FFF;
 }
 
 div#header #navigation {
@@ -46,6 +67,7 @@ div#footer {
     margin-top: 30px;
     padding: 12px 0px 12px 0px;
     text-align: right;
+    background: #FFF;
 }
 
 h1 {
@@ -60,4 +82,16 @@ div.info {
     color: #555;
     font-size: 14px;
     font-style: italic;
+}
+iframe{
+    border: none;
+    width: 600px;
+    height: 450px;
+}
+div.slides{
+    border: 2px solid #C3E5DD;
+    border-radius: 20px;
+    width: 600px;
+    height: 450px;
+    overflow: hidden;
 }
