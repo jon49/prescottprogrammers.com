@@ -9,11 +9,10 @@ body {
 a:link {
     text-decoration: none;
     color: #555;
-    border-left: 1px solid;
-    border-right: 1px solid;
+    border-left: 3px solid;
+    border-color: #C3E5DD;
     padding-left: 5px;
     padding-right: 5px;
-    border-radius: 15px;
 }
 a:visited {
     text-decoration:none;
@@ -22,6 +21,8 @@ a:visited {
 a:hover {
     background-color: #555;
     color: #FFF;
+    border-bottom: 2px solid;
+    border-color: #C3E5DD;
 }
 a:active {
     background: #000;
