@@ -33,7 +33,7 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
     
-    match "posts/slides/*" $ do
+    match "posts/slides/**" $ do
         route $ gsubRoute "posts/" (const "")
         compile $ copyFileCompiler
 

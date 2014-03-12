@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Jon Nyman" />
+  <meta name="date" content="2014-03-13" />
+  <title>Pandoc-Style Markdown</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Pandoc-Style Markdown</h1>
+  <p class="author">
+Jon Nyman
+  </p>
+  <p class="date">March 13, 2014</p>
+</div>
+<div id="what-is-markdown" class="slide section level1">
+<h1>What is Markdown?</h1>
+<p>Markdown is a <strong>plain text formatting syntax</strong> designed so that it can optionally be converted to HTML using a tool by the same name. Markdown is popularly used as format for readme files, or for writing messages in online discussion forums, or in text editors for the quick creation of rich text documents.<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup></p>
+</div>
+<div id="history" class="slide section level1">
+<h1>History</h1>
+<p>The Markdown language was created in 2004 by John Gruber with substantial contributions from Aaron Swartz<sup><a href="#fn2" class="footnoteRef" id="fnref2">2</a></sup></p>
+<p>Markdown’s syntax has been influenced by several existing text-to-HTML filters — including Setext, atx, Textile, reStructuredText, Grutatext, and EtText — the single <strong>biggest source of inspiration</strong> for Markdown’s syntax is the format of <strong>plain text email</strong>.<sup><a href="#fn3" class="footnoteRef" id="fnref3">3</a></sup></p>
+<p>Sites such as GitHub, reddit, Diaspora, Stack Overflow, OpenStreetMap, and SourceForge use variants of Markdown to facilitate discussion between users.</p>
+<p>Used in many sites for creation of content, like Hakyll, Ghost, Jakyll, DocPad, etc.</p>
+</div>
+<div id="example-of-strict-markdown" class="slide section level1">
+<h1>Example of Strict Markdown</h1>
+<div class="figure">
+<img src="images/strict-markdown.png" alt="Markdown Examples" /><p class="caption">Markdown Examples</p>
+</div>
+</div>
+<div id="pandoc-markdown" class="slide section level1">
+<h1>Pandoc Markdown</h1>
+<p>Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this library.<sup><a href="#fn4" class="footnoteRef" id="fnref4">4</a></sup></p>
+<p>You can say that Pandoc is the markdown for technical writers/law documents/book writers/archivists/etc.</p>
+</div>
+<div id="pandoc-read-types" class="slide section level1">
+<h1><a href="../Markdown/images/pandoc-diagram.png">Pandoc Read Types</a></h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">read</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">markdown</td>
+<td align="left">MediaWiki markup</td>
+</tr>
+<tr class="even">
+<td align="left">(subsets of) Textile</td>
+<td align="left">Haddock markup</td>
+</tr>
+<tr class="odd">
+<td align="left">reStructuredText</td>
+<td align="left">OPML</td>
+</tr>
+<tr class="even">
+<td align="left">HTML</td>
+<td align="left">DocBook</td>
+</tr>
+<tr class="odd">
+<td align="left">LaTeX</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="pandoc-write-types" class="slide section level1">
+<h1><a href="../Markdown/images/pandoc-diagram.png">Pandoc Write Types</a></h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Mark Up</th>
+<th align="left">PDF Type</th>
+<th align="left">Doc Type</th>
+<th align="left">Documentation</th>
+<th align="left">Slides</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">plain text</td>
+<td align="left">LaTeX</td>
+<td align="left">RTF</td>
+<td align="left">groff man pages</td>
+<td align="left">HTML Slides</td>
+</tr>
+<tr class="even">
+<td align="left">markdown</td>
+<td align="left">Beamer Slides<sup><a href="#fn5" class="footnoteRef" id="fnref5">5</a></sup></td>
+<td align="left">OPML</td>
+<td align="left">Emacs Org-Mode</td>
+<td align="left">Slidy</td>
+</tr>
+<tr class="odd">
+<td align="left">Textile</td>
+<td align="left">ConTeXt</td>
+<td align="left">DocBook</td>
+<td align="left"></td>
+<td align="left">Slideous</td>
+</tr>
+<tr class="even">
+<td align="left">reStructuredText</td>
+<td align="left">GNU Texinfo</td>
+<td align="left">OpenDocument</td>
+<td align="left"></td>
+<td align="left">DZSlides</td>
+</tr>
+<tr class="odd">
+<td align="left">MediaWiki markup</td>
+<td align="left">PDF</td>
+<td align="left">Word docx</td>
+<td align="left"></td>
+<td align="left">reveal.js</td>
+</tr>
+<tr class="even">
+<td align="left">AsciiDoc</td>
+<td align="left"></td>
+<td align="left">EPUB (v2 or v3)</td>
+<td align="left"></td>
+<td align="left">S5</td>
+</tr>
+<tr class="odd">
+<td align="left">XHTML</td>
+<td align="left"></td>
+<td align="left">FictionBook2</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">HTML 5</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="writers-extensions" class="slide section level1">
+<h1>Writers &amp; Extensions</h1>
+<p>Lua can be used as a writer to intercept and change the output.</p>
+<ul class="incremental">
+<li>document metadata (title, author, date)</li>
+<li>footnotes</li>
+<li>tables</li>
+<li>definition lists</li>
+<li>superscript and subscript</li>
+<li>strikeout</li>
+<li>enhanced ordered lists (start number and numbering style are significant)</li>
+<li>running example lists</li>
+<li>delimited code blocks with syntax highlighting</li>
+<li>smart quotes, dashes, and ellipses</li>
+<li>markdown inside HTML blocks</li>
+<li>inline LaTeX</li>
+</ul>
+</div>
+<div id="extras" class="slide section level1">
+<h1>Extras</h1>
+<ul class="incremental">
+<li>Editors have plugins for Pandoc (emacs, vim, Textmate, Sublime Text, etc.)</li>
+<li>Workflow tools</li>
+<li>Shell Completion</li>
+<li>Wordpress Plugin</li>
+<li>Wikis</li>
+<li>Static Website Generators</li>
+<li>Serving files with Apache</li>
+<li>Used with ConTeXt</li>
+<li>Filters</li>
+<li>Pandoc wrappers and interfaces</li>
+<li>Preprocessors</li>
+<li>Templates</li>
+<li>Processing tools</li>
+</ul>
+</div>
+<div id="examples" class="slide section level1">
+<h1><a href="http://johnmacfarlane.net/pandoc/demos.html">Examples</a></h1>
+<p>See link above.</p>
+</div>
+<div class="footnotes slide">
+<hr />
+<ol>
+<li id="fn1"><p>Source: <a href="http://en.wikipedia.org/wiki/Markdown">http://en.wikipedia.org/wiki/Markdown</a><a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Source: <a href="http://en.wikipedia.org/wiki/Markdown#History">http://en.wikipedia.org/wiki/Markdown#History</a><a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Source: <a href="http://daringfireball.net/projects/markdown/syntax#philosophy">http://daringfireball.net/projects/markdown/syntax#philosophy</a><a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Source: <a href="http://johnmacfarlane.net/pandoc/README.html#description">http://johnmacfarlane.net/pandoc/README.html#description</a><a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>Beamer slide works with LaTeX.<a href="#fnref5">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
