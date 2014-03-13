@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Healthy cooking: latest recipes</title>
+    <link href="http://healthycooking.example.com/atom.xml" rel="self" />
+    <link href="http://healthycooking.example.com" />
+    <id>http://healthycooking.example.com/atom.xml</id>
+    <author>
+        <name>John Doe</name>
+        <email>test@example.com</email>
+    </author>
+    <updated>2014-03-12T00:00:00Z</updated>
+    <entry>
+    <title>Pandoc-Style Markdown Presentation</title>
+    <link href="http://healthycooking.example.com/posts/2014/03/12/markdown_presentation/index.html" />
+    <id>http://healthycooking.example.com/posts/2014/03/12/markdown_presentation/index.html</id>
+    <published>2014-03-12T00:00:00Z</published>
+    <updated>2014-03-12T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+    Posted on March 12, 2014
+    
+</div>
+
+<p>See full size <a href="/slides/markdown.html">here</a>.</p>
+<div class="slides" style="height:700px;">
+<iframe src="/slides/markdown.html" style="height:700px;"/>
+</div>
+
+]]></summary>
+</entry>
+<entry>
+    <title>Database Overview Presentation</title>
+    <link href="http://healthycooking.example.com/posts/2014/03/04/Database_Presentation/index.html" />
+    <id>http://healthycooking.example.com/posts/2014/03/04/Database_Presentation/index.html</id>
+    <published>2014-03-04T00:00:00Z</published>
+    <updated>2014-03-04T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+    Posted on March  4, 2014
+    
+</div>
+
+<p>This presentation was given by Gabriel March 14, 2013. This presentation gives an overview of different database types and where they are useful.</p>
+<p>Just click on the <em>Options</em> button to download the presentation. Click the <em>Full Screen</em> button to see on the full screen.</p>
+<iframe src="https://docs.google.com/presentation/d/1FOWbnWvAbduNdrLLSTZMedlVC4WRaLfFJYkq9VkMduU/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+]]></summary>
+</entry>
+<entry>
+    <title>February Meeting Recap</title>
+    <link href="http://healthycooking.example.com/posts/2014/02/20/FebruaryMeetingRecap/index.html" />
+    <id>http://healthycooking.example.com/posts/2014/02/20/FebruaryMeetingRecap/index.html</id>
+    <published>2014-02-20T00:00:00Z</published>
+    <updated>2014-02-20T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+    Posted on February 20, 2014
+    
+</div>
+
+<p>We met on Tuesday this time hoping to take advantage of the Cafe’s nice space. Unfortunately they close early on Tuesdays. So we headed over to Denny’s instead. In March we’ll go back to our regular Thursdays and meet at Starbuck’s at the Frontier Village.</p>
+<p>We were few this last time but we enjoyed conversation on gaming, functional programming, CAD, and 3D printing!</p>
+<p><a href="https://plus.google.com/116611231182951036063/posts/H3rDjPidXgh">Comment over at google+!</a></p>
+]]></summary>
+</entry>
+<entry>
+    <title>My Comment Makes it On <em>.NET Rocks!</em></title>
+    <link href="http://healthycooking.example.com/posts/2014/02/08/dotNetRocksCommentOnShow/index.html" />
+    <id>http://healthycooking.example.com/posts/2014/02/08/dotNetRocksCommentOnShow/index.html</id>
+    <published>2014-02-08T00:00:00Z</published>
+    <updated>2014-02-08T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+    Posted on February  8, 2014
+    
+</div>
+
+<p>It starts at 6:15 on the <a href="http://dotnetrocks.com/default.aspx?showNum=948">episode they talk about software patents</a>.</p>
+<p>By the way, everything I mentioned actually did happen. Crazy world!</p>
+<p>Comments? Head over to our <a href="https://plus.google.com/116611231182951036063/posts/cxgUq65cgst">Google+ Group</a>!</p>
+]]></summary>
+</entry>
+<entry>
+    <title>January Meetup Recap</title>
+    <link href="http://healthycooking.example.com/posts/2014/01/09/January_Meetup_Recap/index.html" />
+    <id>http://healthycooking.example.com/posts/2014/01/09/January_Meetup_Recap/index.html</id>
+    <published>2014-01-09T00:00:00Z</published>
+    <updated>2014-01-09T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+    Posted on January  9, 2014
+    
+</div>
+
+<p>Seven of us showed up at the meet up this last Thursday. We had four new people show up. We met at <em><a href="http://www.emmanuelcafe.com/">Emmanuel’s Cafe and Bakery</a></em> with roaring music in the background. Many people showed an interest in continuing to meet in Prescott Valley @ Emmanuel’s. So, this next month we will meet on a Tuesday instead, again at Emmanuel’s.</p>
+<p>Dan brought his new <a href="http://www.oculusvr.com/">Oculus Rift</a> to show us. All I got to say is don’t stand up while viewing! It puts you a little off balance. Dan also brought some new toys he made with his new 3D printer!</p>
+<p>Great conversation and company. Hope to see everyone again next month!</p>
+<p>Jon</p>
+]]></summary>
+</entry>
+<entry>
+    <title>F# an Introduction: Slideshow</title>
+    <link href="http://healthycooking.example.com/posts/2013/12/12/FSharpPresentation_Slides/index.html" />
+    <id>http://healthycooking.example.com/posts/2013/12/12/FSharpPresentation_Slides/index.html</id>
+    <published>2013-12-12T00:00:00Z</published>
+    <updated>2013-12-12T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+    Posted on December 12, 2013
+    
+</div>
+
+<p>See full size <a href="/slides/FSharpIntroduction.html">here</a>.</p>
+<div class="slides" >
+<iframe src="/slides/FSharpIntroduction.html" />
+</div>
+
+
+
+]]></summary>
+</entry>
+<entry>
+    <title>F# an Introduction: Single Page</title>
+    <link href="http://healthycooking.example.com/posts/2013/12/12/FSharpPresentation/index.html" />
+    <id>http://healthycooking.example.com/posts/2013/12/12/FSharpPresentation/index.html</id>
+    <published>2013-12-12T00:00:00Z</published>
+    <updated>2013-12-12T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<div class="info">
+    Posted on December 12, 2013
+    
+</div>
+
+<h1 id="credits">Credits</h1>
+<ul>
+<li><a href="http://fsharpforfunandprofit.com">F# for Fun and Profit</a></li>
+</ul>
+<h1 id="history"><a href="http://en.wikipedia.org/wiki/F_Sharp_(programming_language)#History">History</a></h1>
+<blockquote>
+<p>F# originates from Microsoft Research, Cambridge and the language was originally designed and implemented by Don Syme. Andrew Kennedy contributed to the design of units of measure. The F# language and the Visual F# tools for Windows are developed by Microsoft. The F# Software Foundation develop the F# open source compiler and tools based partly on open source releases by the Microsoft Visual F# team.</p>
+</blockquote>
+<blockquote>
+<p>F# features a legacy “ML compatibility mode” which allow programs written in a large subset of OCaml (roughly, with no functors, objects, polymorphic variants and other additions) to be immediately compiled as F#.</p>
+</blockquote>
+<h1 id="influenced-by">Influenced By</h1>
+<ul>
+<li>ML, OCaml, C#, Python, Haskell, Scala, Erlang</li>
+</ul>
+<h1 id="why-use-f">Why Use F#?</h1>
+<ul>
+<li>Conciseness</li>
+<li>Convenience</li>
+<li>Correctness</li>
+<li>Concurrency</li>
+<li>Completeness</li>
+</ul>
+<h1 id="conciseness">Conciseness</h1>
+<ul>
+<li>Not cluttered with curly brackets, semicolons, etc. No need to specify type of object (type inference). Less lines of code to solve similar problems in C#.</li>
+</ul>
+<h1 id="convenience">Convenience</h1>
+<ul>
+<li>Many tasks are simpler in F#
+<ul>
+<li>Complex type definitions</li>
+<li>list processing</li>
+<li>comparison and equality</li>
+<li>state machines</li>
+<li>type providers (feature)</li>
+</ul></li>
+</ul>
+<h1 id="correctness">Correctness</h1>
+<ul>
+<li>Powerful type system</li>
+<li>Business logic can be typed right into the code so errors are caught at compile time.</li>
+<li>Gaming can be helped by F# by using the units of measure.</li>
+</ul>
+<h1 id="concurrency">Concurrency</h1>
+<ul>
+<li>Asynchronous, parallelism, message queuing system, event handling, reactive programming.</li>
+<li>Data is immutable by default so sharing state and avoiding locks is much easier</li>
+</ul>
+<h1 id="completeness">Completeness</h1>
+<ul>
+<li>F# is hybrid functional/OO Language
+<ul>
+<li>Capable of interacting well with other applications.</li>
+</ul></li>
+</ul>
+<h1 id="scripting-testing-code">Scripting &amp; Testing Code</h1>
+<ul>
+<li>F# Interactive (FSI)</li>
+<li>Small Incremental Testing Makes Code More Robust (Functions)</li>
+</ul>
+<h1 id="type-providers"><a href="http://msdn.microsoft.com/en-us/library/vstudio/hh156509.aspx">Type Providers</a></h1>
+<ul>
+<li>Provides types, properties, and methods for F# program.</li>
+<li>Eliminates barriers to working with diverse information.</li>
+<li>No need to create your own types (classes) nor maintain them.</li>
+<li>Great for exploratory code.</li>
+<li>Types can be created from URL or connection string.</li>
+<li>Groups of types are only expanded on demand; that is, they are expanded if the types are actually referenced by your program. This allows for the direct, on-demand integration of large-scale information spaces such as online data markets in a strongly typed way.</li>
+</ul>
+<h1 id="f-in-60-seconds"><a href="http://fsharpforfunandprofit.com/posts/fsharp-in-60-seconds/">F# in 60 Seconds</a></h1>
+<ul>
+<li>See <a href="SampleCode.fs">SampleCode.fs</a></li>
+</ul>
+<h1 id="designing-with-types"><a href="http://fsharpforfunandprofit.com/posts/designing-with-types-conclusion/">Designing with Types</a></h1>
+<h1 id="the-end">The End!</h1>
+<p>:)</p>
+]]></summary>
+</entry>
+
+</feed>
