@@ -9,11 +9,11 @@ import           Data.List (isSuffixOf)
 
 myFeedConfiguration :: FeedConfiguration
 myFeedConfiguration = FeedConfiguration
-    { feedTitle       = "Healthy cooking: latest recipes"
-    , feedDescription = "This feed provides fresh recipes for fresh food!"
-    , feedAuthorName  = "John Doe"
-    , feedAuthorEmail = "test@example.com"
-    , feedRoot        = "http://healthycooking.example.com"
+    { feedTitle       = "Prescott, AZ  Software Engineering Meetup Group"
+    , feedDescription = "Keep up with the Prescott Programmers in Arizona"
+    , feedAuthorName  = "Jon Nyman"
+    , feedAuthorEmail = "nymanjon@gmail.com"
+    , feedRoot        = "http://prescottprogrammers.com/"
     }
 
 main :: IO ()
