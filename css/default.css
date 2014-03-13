@@ -96,3 +96,9 @@ div.slides{
     height: 450px;
     overflow: hidden;
 }
+div.left{
+    float:left;
+}
+div.right{
+    float:right;
+}

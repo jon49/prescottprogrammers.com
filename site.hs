@@ -6,6 +6,16 @@ import           Hakyll.Core.Util.String
 import           Data.List (isSuffixOf)
 
 --------------------------------------------------------------------------------
+
+myFeedConfiguration :: FeedConfiguration
+myFeedConfiguration = FeedConfiguration
+    { feedTitle       = "Healthy cooking: latest recipes"
+    , feedDescription = "This feed provides fresh recipes for fresh food!"
+    , feedAuthorName  = "John Doe"
+    , feedAuthorEmail = "test@example.com"
+    , feedRoot        = "http://healthycooking.example.com"
+    }
+
 main :: IO ()
 main = hakyll $ do
     match "images/*" $ do
@@ -30,6 +40,7 @@ main = hakyll $ do
         route $ asFolderWithIndex
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
     
@@ -66,6 +77,14 @@ main = hakyll $ do
                 >>= cleanIndexUrls
 
     match "templates/*" $ compile templateCompiler
+
+    create ["atom.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = postCtx `mappend` bodyField "description"
+            posts <- fmap (take 10) . recentFirst =<<
+                loadAllSnapshots "posts/*" "content"
+            renderAtom myFeedConfiguration feedCtx posts
 
 
 --------------------------------------------------------------------------------
